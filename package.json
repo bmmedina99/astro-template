@@ -13,5 +13,9 @@
   "dependencies": {
     "astro": "5.7.12"
   },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "sharp": "0.34.1"
+  },
   "packageManager": "pnpm@10.10.0"
 }
