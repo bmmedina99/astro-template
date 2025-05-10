@@ -11,7 +11,9 @@
     "lint": "pnpm biome lint --write ."
   },
   "dependencies": {
-    "astro": "5.7.12"
+    "@tailwindcss/vite": "4.1.6",
+    "astro": "5.7.12",
+    "tailwindcss": "4.1.6"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
