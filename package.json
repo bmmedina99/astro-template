@@ -1,15 +1,17 @@
 {
-  "name": "astro-temp",
+  "name": "astro-template",
+  "description": "Plantilla base de Astro con TailwindCSS y TypeScript preconfigurados",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port=4000",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview --port=5000",
+    "fmt": "pnpm biome format --write .",
+    "lint": "pnpm biome lint --write ."
   },
   "dependencies": {
-    "astro": "^5.7.12"
+    "astro": "5.7.12"
   },
-  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
+  "packageManager": "pnpm@10.10.0"
 }
