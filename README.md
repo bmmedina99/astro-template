@@ -8,7 +8,7 @@ Plantilla base para iniciar un nuevo proyecto con [Astro](https://astro.build/),
 
 ## Características
 
-- **Astro** v5.7 configurado para contenido estático.
+- **Astro** v5.8 configurado para contenido estático.
 - **TailwindCSS** para los estilos.
 - **TypeScript** para usar con `tsconfig.json` optimizado.
 - **Biome** para lintear y formatear el código.
