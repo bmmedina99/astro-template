@@ -1,8 +1,15 @@
 ---
+import Footer from '@/components/sections/Footer.astro'
+import Header from '@/components/sections/Header.astro'
+import Main from '@/components/sections/Main.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout
   title="Astro Template"
   description="Plantilla base de Astro con TailwindCSS y TypeScript preconfigurados"
-/>
+>
+  <Header />
+  <Main />
+  <Footer />
+</Layout>
