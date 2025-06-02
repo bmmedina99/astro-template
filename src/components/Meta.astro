@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css'
+import { Schema } from 'astro-seo-schema'
 
 const canonicalURL = new URL(Astro.request.url, Astro.site).toString()
 const { title, description } = Astro.props
@@ -37,3 +38,8 @@ const { title, description } = Astro.props
 <!-- Imagen Twitter Card - 1200x675 para summary_large_image recomendado -->
 <meta property="twitter:image" content="/images/twitter-card.webp" />
 <meta property="twitter:image:alt" content={title} />
+<Schema item={{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  // Continua agregando propiedades según sea necesario
+}} />
