@@ -18,7 +18,7 @@
   "dependencies": {
     "@astrojs/sitemap": "3.4.1",
     "@tailwindcss/vite": "4.1.8",
-    "astro": "5.8.1",
+    "astro": "5.9.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "schema-dts": "1.1.5"
