@@ -1,6 +1,6 @@
 {
-  "name": "astro-template",
-  "description": "Plantilla base de Astro con TailwindCSS y TypeScript preconfigurados",
+  "name": "astrokit",
+  "description": "Plantilla de inicio ultra-ligera para proyectos con Astro, preconfigurada con TypeScript y TailwindCSS.",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bmmedina99/astro-template.git"
+    "url": "https://github.com/bmmedina99/astrokit.git"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.4.0",
