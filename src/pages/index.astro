@@ -2,12 +2,13 @@
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 import Main from '@/components/layout/Main.astro'
+import { configSite } from '@/site.config'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout
-  title="AstroKit | Plantilla de inicio"
-  description="Plantilla de inicio ultra-ligera para proyectos con Astro, preconfigurada con TypeScript y TailwindCSS."
+  title={configSite.title}
+  description={configSite.description}
 >
   <Header />
   <Main />
