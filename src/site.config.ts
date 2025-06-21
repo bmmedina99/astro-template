@@ -18,6 +18,6 @@ export const navLinks = [
   },
   {
     title: 'Comenzar',
-    href: '#get-started',
+    href: '#started',
   },
 ]

@@ -1,17 +1,19 @@
 ---
-import { configSite } from '@/site.config'
-import globalCSS from '@/styles/global.css?url'
 import fontPoppins from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url'
 import { Schema } from 'astro-seo-schema'
+import { configSite } from '@/site.config'
+import globalCSS from '@/styles/global.css?url'
 
 const canonicalURL = new URL(Astro.request.url, Astro.site).toString()
-const { title, description } = Astro.props
+const { title } = Astro.props
+const siteTitle = `${title} | ${configSite.title}`
+const description = configSite.description
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Precarga la fuentes de public/fonts o de @fontsource -->
+<!-- Precarga la fuentes de public/fonts o de https://fontsource.org -->
 <link
   rel="preload"
   href={fontPoppins}
@@ -56,14 +58,14 @@ const { title, description } = Astro.props
 <link rel="preload" href={globalCSS} as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
 <!-- Datos del sitio -->
-<title>{title}</title>
+<title>{siteTitle}</title>
 <meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content="index, follow">
 <meta name="author" content={configSite.author} />
 
 <!-- Open Graph - Imagen 1200x630 recomendado -->
-<meta property="og:title" content={title} />
+<meta property="og:title" content={siteTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:site_name" content="bmmedina.dev" />
 <meta property="og:image" content=`${canonicalURL}/images/open-graph.webp` />
@@ -74,7 +76,7 @@ const { title, description } = Astro.props
 
 <!-- Twitter Card - Imagen 1200x675 para summary_large_image recomendado -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={title} />
+<meta property="twitter:title" content={siteTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content=`${canonicalURL}/images/twitter-card.webp` />
 <meta property="twitter:url" content={canonicalURL} />
