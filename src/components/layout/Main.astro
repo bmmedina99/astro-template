@@ -1,83 +1,12 @@
 ---
-import { Image } from 'astro:assets'
+import Features from '../sections/Features.astro'
+import Hero from '../sections/Hero.astro'
+import Integrations from '../sections/Integrations.astro'
+import Started from '../sections/Started.astro'
 ---
 
-<main class="flex flex-col min-h-dvh">
-  <section
-    class="bg-gradient-to-tr from-russian-violet to-rebecca-purple text-white"
-  >
-    <div class="container mx-auto px-4 py-20 text-center">
-      <h2 class="text-periwinkle text-4xl font-extrabold mb-4">
-        AstroKit | Plantilla de Inicio
-      </h2>
-      <p class="text-xl mb-8">
-        Plantilla de inicio ultra-ligera para proyectos con Astro, preconfigurada con TypeScript y TailwindCSS.
-      </p>
-      <a
-        href="#features"
-        class="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded shadow hover:bg-gray-100 transition"
-      >
-        Conoce más
-      </a>
-    </div>
-  </section>
-  <section id="features" class="container mx-auto px-4 py-16">
-    <h3 class="text-periwinkle text-3xl font-bold text-center mb-12">
-      Funcionalidades Principales
-    </h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-pretty">
-      <div class="bg-white rounded-lg shadow p-6 text-center">
-        <Image
-          src="/images/window.svg"
-          alt="Rápido"
-          width={64}
-          height={64}
-          class="mx-auto mb-4"
-        />
-        <h4 class="text-xl font-semibold mb-2">Rendimiento</h4>
-        <p class="text-gray-600">
-          Genera contenido estático y carga solo lo necesario, garantizando un gran rendimiento.
-        </p>
-      </div>
-      <div class="bg-white rounded-lg shadow p-6 text-center">
-        <Image
-          src="/images/file.svg"
-          alt="Código"
-          width={64}
-          height={64}
-          class="mx-auto mb-4"
-        />
-        <h4 class="text-xl font-semibold mb-2">TypeScript</h4>
-        <p class="text-gray-600">
-          Configuración estricta y soporte completo de módulos ES, con tipados desde la primera línea.
-        </p>
-      </div>
-      <div class="bg-white rounded-lg shadow p-6 text-center">
-        <Image
-          src="/images/globe.svg"
-          alt="Tailwind"
-          width={64}
-          height={64}
-          class="mx-auto mb-4"
-        />
-        <h4 class="text-xl font-semibold mb-2">TailwindCSS</h4>
-        <p class="text-gray-600">
-          Archivo de configuración personalizado y ejemplo de estilos utilitarios para acelerar el diseño.
-        </p>
-      </div>
-      <div class="bg-white rounded-lg shadow p-6 text-center">
-        <Image
-          src="/images/sitemap.svg"
-          alt="Sitemap"
-          width={64}
-          height={64}
-          class="mx-auto mb-4"
-        />
-        <h4 class="text-xl font-semibold mb-2">Sitemap</h4>
-        <p class="text-gray-600">
-          Generación de sitemap.xml automática para mejorar el SEO y la indexación en buscadores.
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+<p class="mt-6 text-xs text-center text-gray-300 md:text-sm">src/components/layout/Main.astro</p>
+<Hero />
+<Features />
+<Integrations />
+<Started />

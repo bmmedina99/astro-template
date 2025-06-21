@@ -1,16 +1,45 @@
-<header>
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <h1 class="text-periwinkle text-2xl font-bold">AstroKit</h1>
-    <nav class="space-x-6">
-      <a href="#features" class="text-gray-400 hover:text-gray-100">
-        Funcionalidades
-      </a>
+---
+import { configSite, navLinks } from '@/site.config'
+import Icon from '../ui/Icon.astro'
+---
+
+<header
+  class="sticky top-0 z-50 border-b border-slate-800/50 backdrop-blur-sm bg-slate-900/50"
+>
+  <div class="container px-4 py-4 mx-auto">
+    <p class="mb-2 text-xs text-center text-gray-300 md:text-sm">
+      src/components/layout/Header.astro
+    </p>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div
+          class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-r from-orange-pantone to-medium-slate-blue"
+        >
+          <Icon name="astro" class="text-white" />
+        </div>
+        <span class="text-xl font-bold text-white">{configSite.title}</span>
+      </div>
+      <nav class="items-center hidden space-x-6 md:flex">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="transition-colors text-slate-300 hover:text-orange-400"
+            >
+              {link.title}
+            </a>
+          ))
+        }
+      </nav>
       <a
-        href="/contacto"
-        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        href="https://github.com/bmmedina99/astrokit"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center px-4 py-2 text-orange-400 transition-colors bg-transparent border-2 rounded-lg border-orange-pantone hover:bg-orange-pantone hover:text-white"
       >
-        Contacto
+        <Icon name="github" class="mr-2" />
+        GitHub
       </a>
-    </nav>
+    </div>
   </div>
 </header>
