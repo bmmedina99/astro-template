@@ -1,7 +1,7 @@
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
-import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
+import robotsTxt from 'astro-robots-txt'
 import { configSite } from './src/site.config'
 
 export default defineConfig({
@@ -10,6 +10,5 @@ export default defineConfig({
   integrations: [sitemap(), robotsTxt()],
   vite: {
     plugins: [tailwindcss()],
-    minify: 'es',
   },
 })
