@@ -2,7 +2,7 @@
 import fontPoppins from '@fontsource/poppins/files/poppins-latin-400-normal.woff2?url'
 import { Schema } from 'astro-seo-schema'
 import { configSite } from '@/site.config'
-import globalCSS from '@/styles/global.css?url'
+import globalCSS from '@/styles/global.css?inline'
 
 const canonicalURL = new URL(Astro.request.url, Astro.site).toString()
 const { title } = Astro.props
@@ -22,12 +22,8 @@ const description = configSite.description
   crossorigin="anonymous"
 />
 
-<!-- Critical CSS + Fuentes  -->
+<!-- Fuentes  -->
 <style>
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 3rem;
-  }
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -54,8 +50,8 @@ const description = configSite.description
   }
 </style>
 
-<!-- Carga el CSS generado de manera asincrona -->
-<link rel="preload" href={globalCSS} as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<!-- Carga el CSS generado en linea evitando FOUC -->
+<style set:html={globalCSS}></style>
 
 <!-- Datos del sitio -->
 <title>{siteTitle}</title>
