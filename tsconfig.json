@@ -1,9 +1,6 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    // Activar las siguientes opciones si se desea utilizar React con Astro
-    // "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    // "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
