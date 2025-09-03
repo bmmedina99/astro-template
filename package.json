@@ -27,13 +27,13 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@biomejs/biome": "2.1.1",
+    "@biomejs/biome": "2.2.2",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/node": "24.0.13",
+    "@types/node": "24.3.0",
     "sharp": "0.34.3",
-    "tailwindcss": "4.1.11",
-    "typescript": "5.8.3"
+    "tailwindcss": "4.1.12",
+    "typescript": "5.9.2"
   },
   "packageManager": "pnpm@10.13.1"
 }
