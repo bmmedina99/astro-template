@@ -2,10 +2,11 @@
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 import Main from '@/components/layout/Main.astro'
+import { configSite } from '@/site.config'
 import Layout from '../layouts/Layout.astro'
 ---
 <!-- Modifica el titulo y descripción del sitio en src/site.config.ts -->
-<Layout title="Template">
+<Layout title="Template" description={configSite.description}>
   <Header />
   <Main />
   <Footer />
