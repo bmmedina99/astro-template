@@ -16,6 +16,9 @@
     "type": "git",
     "url": "https://github.com/bmmedina99/astrokit.git"
   },
+  "bugs": {
+    "url": "https://github.com/bmmedina99/astrokit/issues"
+  },
   "dependencies": {
     "@astrojs/sitemap": "3.5.1",
     "@fontsource/poppins": "5.2.6",
