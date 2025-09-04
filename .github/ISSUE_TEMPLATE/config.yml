@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Documentación de AstroKit"
+    url: "https://github.com/bmmedina99/astrokit#readme"
+    about: "Revisa el README para más información"
+
+  - name: "Documentación oficial Astro"
+    url: "https://docs.astro.build/"
+    about: "Revisa la documentación oficial de Astro"
+

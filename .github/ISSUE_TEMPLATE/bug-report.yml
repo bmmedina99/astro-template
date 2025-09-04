@@ -20,7 +20,6 @@ body:
       label: "Environment"
       description: "The environment where the bug occurred."
       placeholder: "e.g., FireFox 142, Chrome 140 or Safari 18"
-      render: markdown
     validations:
       required: true
   - type: textarea
