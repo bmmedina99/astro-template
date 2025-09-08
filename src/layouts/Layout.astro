@@ -1,4 +1,6 @@
 ---
+import Footer from '@/components/layout/Footer.astro'
+import Header from '@/components/layout/Header.astro'
 import Meta from '../components/Meta.astro'
 import { configSite } from '../site.config'
 
@@ -13,7 +15,9 @@ const { ...meta } = Astro.props
   <body
     class="bg-gradient-to-br from-slate-800 via-purple-800 to-slate-800"
   >
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
