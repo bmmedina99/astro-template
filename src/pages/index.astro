@@ -1,9 +1,22 @@
 ---
 import Main from '@/components/layout/Main.astro'
+import Features from '@/components/sections/Features.astro'
+import Hero from '@/components/sections/Hero.astro'
+import Integrations from '@/components/sections/Integrations.astro'
+import Started from '@/components/sections/Started.astro'
 import { configSite } from '@/site.config'
 import Layout from '../layouts/Layout.astro'
 ---
+
 <!-- Modifica el titulo y descripción del sitio en src/site.config.ts -->
 <Layout title="Template" description={configSite.description}>
-  <Main />
+  <Main>
+    <p class="mt-6 text-xs text-center text-gray-300 md:text-sm">
+      src/components/layout/Main.astro
+    </p>
+    <Hero />
+    <Features />
+    <Integrations />
+    <Started />
+  </Main>
 </Layout>

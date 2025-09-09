@@ -1,12 +1,13 @@
 ---
-import Features from '../sections/Features.astro'
-import Hero from '../sections/Hero.astro'
-import Integrations from '../sections/Integrations.astro'
-import Started from '../sections/Started.astro'
+const { class: classes } = Astro.props
 ---
 
-<p class="mt-6 text-xs text-center text-gray-300 md:text-sm">src/components/layout/Main.astro</p>
-<Hero />
-<Features />
-<Integrations />
-<Started />
+<main
+  id="main-content"
+  class:list={[
+    "relative",
+    { [classes]: classes },
+  ]}
+>
+  <slot />
+</main>
