@@ -1,16 +1,17 @@
 ---
+import Main from '@/components/layout/Main.astro'
 import Layout from '@/layouts/Layout.astro'
 
 const { error } = Astro.props
 ---
 
 <Layout title="Error inesperado">
-  <main class="flex items-center justify-center min-h-screen relative">
-    <div class="w-full max-w-2xl space-y-8 text-center">
+  <Main class="relative flex items-center justify-center flex-grow overflow-hidden">
+    <div class="max-w-2xl mx-auto space-y-4 text-center">
       <p class="mb-4 text-xs text-gray-300 md:text-sm">src/pages/500.astro</p>
-      <div class="space-y-4">
+      <section class="space-y-4">
         <h1
-          class="text-6xl font-bold text-transparent bg-gradient-to-r from-orange-pantone to-medium-slate-blue bg-clip-text"
+          class="font-bold text-transparent bg-gradient-to-r from-orange-pantone to-medium-slate-blue bg-clip-text"
         >
           Oops!
         </h1>
@@ -31,13 +32,12 @@ const { error } = Astro.props
             </details>
           )
         }
-      </div>
-
+      </section>
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <button
           type="button"
           onclick='window.location.reload()'
-          class="flex items-center gap-3 px-8 py-4 font-semibold text-black transition-all duration-200 transform rounded-full shadow-lg group bg-gradient-to-r from-orange-pantone to-medium-slate-blue hover:shadow-xl hover:scale-105"
+          class="flex items-center gap-3 px-8 py-4 font-semibold transition-all duration-200 transform rounded-full shadow-lg text-neutral-200 group bg-gradient-to-r from-orange-pantone to-medium-slate-blue hover:shadow-xl hover:scale-105"
         >
           Intentar de nuevo
         </button>
@@ -49,13 +49,13 @@ const { error } = Astro.props
         </a>
       </div>
       <div
-        class="absolute w-20 h-20 rounded-full top-20 left-10 bg-medium-slate-blue/20 blur-xl"
+        class="absolute rounded-full size-20 top-20 left-10 bg-medium-slate-blue/20 blur-xl"
       >
       </div>
       <div
-        class="absolute w-32 h-32 rounded-full bottom-20 right-10 bg-orange-pantone/20 blur-xl"
+        class="absolute rounded-full size-32 bottom-20 right-10 bg-orange-pantone/20 blur-xl"
       >
       </div>
     </div>
-  </main>
+  </Main>
 </Layout>
