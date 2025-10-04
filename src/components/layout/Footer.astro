@@ -3,28 +3,28 @@ import Icon from '../ui/Icon.astro'
 ---
 
 <footer class="px-4 py-12 bg-slate-900 text-center">
-    <p class="mb-4 text-xs text-gray-300 md:text-sm">
-      src/components/layout/Footer.astro
-    </p>
-    <section class="flex flex-col items-center justify-between md:flex-row">
-      <div class="flex items-center mb-4 space-x-2 text-white md:mb-0">
-        <div
-          class="flex items-center justify-center w-6 h-6 rounded bg-gradient-to-r from-orange-pantone to-medium-slate-blue"
-        >
-          <Icon name="astro" width="12" height="12" />
-        </div>
-        <span class="font-semibold">AstroKit Template</span>
+  <p class="mb-4 text-xs text-gray-300 md:text-sm">
+    src/components/layout/Footer.astro
+  </p>
+  <section class="flex flex-col items-center justify-between md:flex-row">
+    <div class="flex items-center mb-4 space-x-2 text-white md:mb-0">
+      <div
+        class="flex items-center justify-center w-6 h-6 rounded bg-gradient-to-r from-orange-pantone to-medium-slate-blue"
+      >
+        <Icon name="astro" width="12" height="12" />
       </div>
-      <p class="text-sm text-slate-300">
-        {new Date().getFullYear()} | Desarrollador y diseñado por
-        <a
-          href="https://bmmedina.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline transition-colors hover:text-medium-slate-blue"
-        >
-          @bmmedina99
-        </a>
-      </p>
-    </section>
+      <span class="font-semibold">AstroKit Template</span>
+    </div>
+    <p class="text-sm text-slate-300">
+      {new Date().getFullYear()} | Desarrollador y diseñado por
+      <a
+        href="https://bmmedina.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline transition-colors hover:text-medium-slate-blue"
+      >
+        @bmmedina99
+      </a>
+    </p>
+  </section>
 </footer>
