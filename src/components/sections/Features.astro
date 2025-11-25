@@ -2,76 +2,72 @@
 import Icon from '../ui/Icon.astro'
 ---
 
-<section id="features" class="px-4 py-20">
-  <div class="container mx-auto">
-    <div class="mb-16 text-center">
-      <p class="mb-2 text-xs text-gray-300 md:text-sm">
-        src/components/sections/Features.astro
-      </p>
-      <h2 class="mb-4 text-4xl font-bold text-white">Características</h2>
-      <p class="max-w-2xl mx-auto text-lg text-slate-300 text-pretty">
-        Todo lo que se necesita para comenzar un proyecto con
-        <span
-          class="relative inline-block before:absolute before:-inset-1 before:block before:skew-y-3 before:bg-linear-to-r before:from-orange-pantone before:to-medium-slate-blue"
-        >
-          <span class="relative font-semibold text-white">Astro</span>
-        </span> de forma rápida y eficiente
+<section id="features" class="container mx-auto px-4 py-20">
+  <div class="mb-16 text-center">
+    <p class="mb-2 text-xs text-gray-300 md:text-sm">
+      src/components/sections/Features.astro
+    </p>
+    <h2 class="mb-4 text-4xl font-bold text-white">Características</h2>
+    <p class="max-w-2xl mx-auto text-lg text-slate-300 text-pretty">
+      Todo lo que se necesita para comenzar un proyecto con
+      <span
+        class="relative inline-block before:absolute before:-inset-1 before:block before:skew-y-3 before:bg-linear-to-r before:from-orange-pantone before:to-medium-slate-blue"
+      >
+        <span class="relative font-semibold text-white">Astro</span>
+      </span> de forma rápida y eficiente
+    </p>
+  </div>
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <div
+      class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10"
+    >
+      <div
+        class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-orange-500 to-orange-600"
+      >
+        <Icon name="astro" />
+      </div>
+      <h3 class="mb-2 text-lg font-semibold text-white">Astro v5</h3>
+      <p class="text-sm text-slate-300">
+        Configurado para contenido estático con la última versiónl.
       </p>
     </div>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <div
+      class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10"
+    >
       <div
-        class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-orange-500 hover:shadow-lg hover:shadow-orange-500/10"
+        class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-purple-500 to-purple-600"
       >
-        <div
-          class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-orange-500 to-orange-600"
-        >
-          <Icon name="astro" />
-        </div>
-        <h3 class="mb-2 text-lg font-semibold text-white">Astro v5</h3>
-        <p class="text-sm text-slate-300">
-          Configurado para contenido estático con la última versiónl.
-        </p>
+        <Icon name="tailwindcss" />
       </div>
+      <h3 class="mb-2 text-lg font-semibold text-white">TailwindCSS v4</h3>
+      <p class="text-sm text-slate-300">
+        Estilos rápidos y modernos con la última versión.
+      </p>
+    </div>
+    <div
+      class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10"
+    >
       <div
-        class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/10"
+        class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-blue-500 to-blue-600"
       >
-        <div
-          class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-purple-500 to-purple-600"
-        >
-          <Icon name="tailwindcss" />
-        </div>
-        <h3 class="mb-2 text-lg font-semibold text-white">TailwindCSS v4</h3>
-        <p class="text-sm text-slate-300">
-          Estilos rápidos y modernos con la última versión.
-        </p>
+        <Icon name="typescript" />
       </div>
-      <div
-        class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-blue-500 hover:shadow-lg hover:shadow-blue-500/10"
-      >
-        <div
-          class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-blue-500 to-blue-600"
-        >
-          <Icon name="typescript" />
-        </div>
-        <h3 class="mb-2 text-lg font-semibold text-white">TypeScript v5</h3>
-        <p class="text-sm text-slate-300">
-          Configuración optimizada con tsconfig.json para mejor desarrollo.
-        </p>
-      </div>
+      <h3 class="mb-2 text-lg font-semibold text-white">TypeScript v5</h3>
+      <p class="text-sm text-slate-300">
+        Configuración optimizada con tsconfig.json para mejor desarrollo.
+      </p>
+    </div>
 
+    <div
+      class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-green-500 hover:shadow-lg hover:shadow-green-500/10"
+    >
       <div
-        class="p-6 transition-all duration-300 border rounded-lg bg-slate-800/50 border-slate-700 hover:border-green-500 hover:shadow-lg hover:shadow-green-500/10"
+        class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-green-500 to-green-600"
       >
-        <div
-          class="flex items-center justify-center w-12 h-12 mb-4 text-white rounded-lg bg-linear-to-r from-green-500 to-green-600"
-        >
-          <Icon name="biome" />
-        </div>
-        <h3 class="mb-2 text-lg font-semibold text-white">Biome v2</h3>
-        <p class="text-sm text-slate-300">
-          Para lintear y formatear el código.
-        </p>
+        <Icon name="biome" />
       </div>
+      <h3 class="mb-2 text-lg font-semibold text-white">Biome v2</h3>
+      <p class="text-sm text-slate-300">Para lintear y formatear el código.</p>
     </div>
   </div>
 </section>

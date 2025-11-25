@@ -1,104 +1,101 @@
-<section id="started" class="px-4 py-20">
-  <div class="container mx-auto">
-    <div class="mb-16 text-center">
-      <p class="mb-2 text-xs text-gray-300 md:text-sm">
-        src/components/section/Started.Astro
-      </p>
-      <h2 class="mb-4 text-4xl font-bold text-white">Comenzar tu proyecto</h2>
-      <p class="text-lg text-slate-300">
-        Comienza tu proyecto con este template de Astro. Sigue estos 4 sencillos
-        pasos
-      </p>
-    </div>
-
-    <div class="max-w-3xl mx-auto">
-      <div class="space-y-8">
-        <div class="flex items-start space-x-4">
-          <div
-            class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+<section id="started" class="container mx-auto px-4 py-20">
+  <div class="mb-16 text-center">
+    <p class="mb-2 text-xs text-gray-300 md:text-sm">
+      src/components/sections/Started.astro
+    </p>
+    <h2 class="mb-4 text-4xl font-bold text-white">Comenzar tu proyecto</h2>
+    <p class="text-lg text-slate-300">
+      Comienza tu proyecto con este template de Astro. Sigue estos 4 sencillos
+      pasos
+    </p>
+  </div>
+  <div class="max-w-3xl mx-auto">
+    <div class="space-y-8">
+      <div class="flex items-start space-x-4">
+        <div
+          class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+        >
+          1
+        </div>
+        <h3 class="mb-2 text-lg font-semibold text-white">
+          En GitHub, haz clic en
+          <a
+            href="https://github.com/new?template_name=astrokit&template_owner=bmmedina99"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline text-orange-pantone hover:text-orange-400"
           >
-            1
-          </div>
+            Use this template
+          </a>
+          y crea tu repositorio nuevo.
+        </h3>
+      </div>
+      <div class="flex items-start space-x-4">
+        <div
+          class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+        >
+          2
+        </div>
+        <div>
           <h3 class="mb-2 text-lg font-semibold text-white">
-            En GitHub, haz clic en
-            <a
-              href="https://github.com/new?template_name=astrokit&template_owner=bmmedina99"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline text-orange-pantone hover:text-orange-400"
-            >
-              Use this template
-            </a>
-            y crea tu repositorio nuevo.
+            Clona tu repositorio
           </h3>
-        </div>
-        <div class="flex items-start space-x-4">
           <div
-            class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+            class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
           >
-            2
-          </div>
-          <div>
-            <h3 class="mb-2 text-lg font-semibold text-white">
-              Clona tu repositorio
-            </h3>
-            <div
-              class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
-            >
-              git clone https://github.com/tu-usuario/nombre-proyecto.git
-              <span class="block mt-1">cd nombre-proyecto</span>
-            </div>
-          </div>
-        </div>
-        <div class="flex items-start space-x-4">
-          <div
-            class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
-          >
-            3
-          </div>
-          <div>
-            <h3 class="mb-2 text-lg font-semibold text-white">
-              Instala las dependencias
-            </h3>
-            <div
-              class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
-            >
-              pnpm install
-            </div>
-          </div>
-        </div>
-        <div class="flex items-start space-x-4">
-          <div
-            class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
-          >
-            4
-          </div>
-          <div>
-            <h3 class="mb-2 text-lg font-semibold text-white">
-              Inicia el entorno de desarrollo
-            </h3>
-            <div
-              class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
-            >
-              pnpm run dev
-            </div>
+            git clone https://github.com/tu-usuario/nombre-proyecto.git
+            <span class="block mt-1">cd nombre-proyecto</span>
           </div>
         </div>
       </div>
-      <div class="mt-12 text-center">
-        <p class="text-sm text-slate-300">
-          Y listo, accede a tu navegador y ve el resultado.
-          <code class="px-2 py-1 text-orange-400 rounded bg-slate-800">
-            https://localhost:4000
-          </code>
-        </p>
-        <p class="text-sm text-slate-300">
-          Ahora queda que comiences a modificar a tu gusto.
-        </p>
-        <p class="text-sm text-orange-pantone">
-          ¡Qué tengas un muy buen desarrollo!
-        </p>
+      <div class="flex items-start space-x-4">
+        <div
+          class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+        >
+          3
+        </div>
+        <div>
+          <h3 class="mb-2 text-lg font-semibold text-white">
+            Instala las dependencias
+          </h3>
+          <div
+            class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
+          >
+            pnpm install
+          </div>
+        </div>
       </div>
+      <div class="flex items-start space-x-4">
+        <div
+          class="flex items-center justify-center shrink-0 size-8 text-sm font-bold text-white rounded-full bg-linear-to-t from-orange-pantone to-medium-slate-blue"
+        >
+          4
+        </div>
+        <div>
+          <h3 class="mb-2 text-lg font-semibold text-white">
+            Inicia el entorno de desarrollo
+          </h3>
+          <div
+            class="p-4 font-mono text-sm rounded-lg bg-slate-800 text-slate-300"
+          >
+            pnpm run dev
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-12 text-center">
+      <p class="text-sm text-slate-300">
+        Y listo, accede a tu navegador y ve el resultado.
+        <code class="px-2 py-1 text-orange-400 rounded bg-slate-800">
+          https://localhost:4000
+        </code>
+      </p>
+      <p class="text-sm text-slate-300">
+        Ahora queda que comiences a modificar a tu gusto.
+      </p>
+      <p class="text-sm text-orange-pantone">
+        ¡Qué tengas un muy buen desarrollo!
+      </p>
     </div>
   </div>
 </section>
