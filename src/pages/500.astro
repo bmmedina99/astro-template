@@ -6,7 +6,7 @@ const { error } = Astro.props
 ---
 
 <Layout title="Error inesperado">
-  <Main class="flex items-center justify-center flex-grow overflow-hidden">
+  <Main class="flex items-center justify-center grow overflow-hidden">
     <div class="max-w-2xl mx-auto space-y-4 text-center">
       <p class="mb-4 text-xs text-gray-300 md:text-sm">src/pages/500.astro</p>
       <section class="space-y-4">
@@ -26,7 +26,7 @@ const { error } = Astro.props
               <summary class="font-medium text-red-700 cursor-pointer">
                 Detalles del error (desarrollo)
               </summary>
-              <pre class="mt-2 text-sm text-red-600 break-words whitespace-pre-wrap">
+              <pre class="mt-2 text-sm text-red-600 wrap-break-word whitespace-pre-wrap">
                 {error.message}
               </pre>
             </details>
