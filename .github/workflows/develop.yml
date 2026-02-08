@@ -3,7 +3,7 @@ name: Develop Pipeline
 on:
   push:
     branches:
-      - production # Cambiar rama a la rama de desarrollo
+      - production # Cambiar a la rama de desarrollo
   pull_request:
     branches:
       - develop
