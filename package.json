@@ -1,6 +1,6 @@
 {
   "name": "astrokit",
-  "description": "Plantilla de inicio ultra-ligera para proyectos con Astro, preconfigurada con TypeScript y TailwindCSS.",
+  "description": "Plantilla de Astro para crear sitios web estáticos rápidos; optimizada para SEO y accesibilidad, preconfigurada con TailwindCSS y TypeScript.",
   "type": "module",
   "version": "0.0.0",
   "private": true,
