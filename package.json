@@ -20,10 +20,9 @@
     "url": "https://github.com/bmmedina99/astrokit/issues"
   },
   "dependencies": {
+    "astro": "6.0.5",
     "@astrojs/sitemap": "3.7.1",
     "@fontsource/poppins": "5.2.7",
-    "@tailwindcss/vite": "4.2.1",
-    "astro": "6.0.5",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "6.0.0",
     "schema-dts": "1.1.5"
@@ -35,6 +34,7 @@
     "@semantic-release/git": "10.0.1",
     "@types/node": "25.5.0",
     "sharp": "0.34.5",
+    "@tailwindcss/vite": "4.2.1",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   },
