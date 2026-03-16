@@ -33,7 +33,7 @@ Plantilla base para iniciar un nuevo proyecto con [Astro](https://astro.build/),
 4. Inicia el entorno de desarrollo
 
 ```bash
-  pnpm run **dev**
+  pnpm run dev
 ```
 5. Accede a http://localhost:4000 y listo
 
@@ -41,16 +41,18 @@ Plantilla base para iniciar un nuevo proyecto con [Astro](https://astro.build/),
 
 ## Estructura del proyecto
 
+```
 astrokit/
   |-- .github/ <-- configuraciones de GitHub
     |-- workflows/ <-- acciones de GitHub
-      |-- develop.yml <-- pipeline de desarrollo, modificar la rama de desarrollo
+      |-- ci.yml <-- ci pipeline, modificar a la rama principal
   |-- public/ <--  archivos estáticos
   |-- src/ <-- código fuente
     |-- components/ <-- componentes reutilizables
     |-- layouts/ <-- plantillas de página
     |-- pages/ <-- páginas del sitio
     |-- styles/ <-- estilos globales
+```
 
 ## Licencia
 
