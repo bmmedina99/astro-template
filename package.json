@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.1",
-    "@fontsource/poppins": "5.2.7",
     "astro": "6.0.5",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "6.0.0",
