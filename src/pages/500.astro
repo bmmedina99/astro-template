@@ -5,17 +5,21 @@ import Layout from '@/layouts/Layout.astro'
 const { error } = Astro.props
 ---
 
-<Layout title="Error inesperado">
-  <Main class="flex items-center justify-center grow overflow-hidden">
+<Layout
+  title="Error inesperado"
+  description="Ha ocurrido un error inesperado. Nuestro equipo ha sido notificado y está trabajando para solucionarlo."
+  robots="noindex, follow"
+  errorPage
+>
+  <Main class="px-4 py-24">
     <div class="max-w-2xl mx-auto space-y-4 text-center">
       <p class="mb-4 text-xs text-gray-300 md:text-sm">src/pages/500.astro</p>
       <section class="space-y-4">
         <h1
           class="font-bold text-transparent bg-linear-to-r from-orange-pantone to-medium-slate-blue bg-clip-text"
         >
-          Oops!
+          Algo salió mal
         </h1>
-        <h2 class="text-3xl font-semibold text-white">Algo salió mal</h2>
         <p class="max-w-md mx-auto text-lg leading-relaxed text-slate-300">
           Ha ocurrido un error inesperado. No te preocupes, nuestro equipo ha
           sido notificado y está trabajando para solucionarlo.
@@ -26,7 +30,7 @@ const { error } = Astro.props
               <summary class="font-medium text-red-700 cursor-pointer">
                 Detalles del error (desarrollo)
               </summary>
-              <pre class="mt-2 text-sm text-red-600 wrap-break-word whitespace-pre-wrap">
+              <pre class="mt-2 text-sm text-red-600 whitespace-pre-line">
                 {error.message}
               </pre>
             </details>
@@ -47,14 +51,6 @@ const { error } = Astro.props
         >
           Volver al inicio
         </a>
-      </div>
-      <div
-        class="absolute rounded-full size-20 top-20 left-10 bg-medium-slate-blue/20 blur-xl"
-      >
-      </div>
-      <div
-        class="absolute rounded-full size-32 bottom-20 right-10 bg-orange-pantone/20 blur-xl"
-      >
       </div>
     </div>
   </Main>
