@@ -4,7 +4,7 @@ import { Schema } from "astro-seo-schema";
 import { configSite } from "@/site.config";
 import globalCSS from "@/styles/global.css?inline";
 
-const { title, description } = Astro.props;
+const { title, description, robots = "index, follow", errorPage } = Astro.props;
 const siteTitle = `${title} | ${configSite.title}`;
 const siteAuthor = configSite.author;
 const siteURL = new URL(Astro.request.url, Astro.site).toString();
@@ -22,31 +22,34 @@ const siteURL = new URL(Astro.request.url, Astro.site).toString();
 <!-- Datos del sitio -->
 <title>{siteTitle}</title>
 <meta name="description" content={description} />
-<meta name="generator" content={Astro.generator} />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content={robots} />
 <meta name="author" content={siteAuthor} />
 
-<!-- Open Graph - Imagen 1200x630 recomendado -->
-<meta property="og:title" content={siteTitle} />
-<meta property="og:description" content={description} />
-<meta property="og:site_name" content="bmmedina.dev" />
-<meta property="og:image" content=`${siteURL}/images/open-graph.webp` />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content={siteURL} />
-<meta property="og:type" content="website" />
+<!-- Open Graph - Imagen 1200x630 recomendada -->
+<!-- Twitter Card - Imagen 1200x675 para summary_large_image recomendada -->
+{
+  !errorPage && (
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="bmmedina.dev" />
+    <meta property="og:image" content={`${siteURL}/images/open-graph.webp`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={siteURL} />
+    <meta property="og:type" content="website" />
 
-<!-- Twitter Card - Imagen 1200x675 para summary_large_image recomendado -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={siteTitle} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content=`${siteURL}/images/twitter-card.webp` />
-<meta property="twitter:url" content={siteURL} />
-<meta property="twitter:site" content="@twiter-site" />
-<meta property="twitter:creator" content="@twitter-author" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={siteTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${siteURL}/images/twitter-card.webp`} />
+    <meta property="twitter:url" content={siteURL} />
+    <meta property="twitter:site" content="@twiter-site" />
+    <meta property="twitter:cre tor" content="@twitter-author" />
+  )
+}
 
 <!-- Propiedades + Favicon -->
-<meta name="theme-color" content="#003014" />
+<meta name="theme-color" content="#faf0e6" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
