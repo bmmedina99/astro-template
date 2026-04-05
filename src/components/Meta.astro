@@ -1,13 +1,13 @@
 ---
-import { Font } from "astro:assets";
-import { Schema } from "astro-seo-schema";
-import { configSite } from "@/site.config";
-import globalCSS from "@/styles/global.css?inline";
+import { Font } from 'astro:assets'
+import { Schema } from 'astro-seo-schema'
+import { configSite } from '@/site.config'
+import globalCSS from '@/styles/global.css?inline'
 
-const { title, description, robots = "index, follow", errorPage } = Astro.props;
-const siteTitle = `${title} | ${configSite.title}`;
-const siteAuthor = configSite.author;
-const siteURL = new URL(Astro.request.url, Astro.site).toString();
+const { title, description, robots = 'index, follow', errorPage } = Astro.props
+const siteTitle = `${title} | ${configSite.title}`
+const siteAuthor = configSite.author
+const siteURL = new URL(Astro.request.url, Astro.site).toString()
 ---
 
 <meta charset="utf-8" />
