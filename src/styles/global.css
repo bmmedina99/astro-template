@@ -6,3 +6,14 @@
   --color-orange-pantone: oklch(68.4% 0.21 40.8);
   --color-medium-slate-blue: oklch(60.5% 0.22 292.8);
 }
+
+@layer base {
+  main > #hero-content:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100dvh;
+    padding: clamp(1.5rem, 5vh, 4rem) clamp(1rem, 5vw, 5rem);
+  }
+}
