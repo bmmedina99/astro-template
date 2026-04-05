@@ -9,8 +9,8 @@
     "build": "astro check && astro build",
     "release": "pnpm dlx semantic-release",
     "preview": "astro preview --port=5000",
-    "fmt": "pnpm biome format --write .",
-    "lint": "pnpm biome lint --write ."
+    "fmt": "biome format --write .",
+    "lint": "biome lint --write ."
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "25.5.2",
     "tailwindcss": "4.2.2",
-    "typescript": "5.9.3"
+    "typescript": "6.0.2"
   },
   "optionalDependencies": {
     "sharp": "0.34.5"
