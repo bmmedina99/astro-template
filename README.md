@@ -2,7 +2,7 @@
 
 [![Astro version](https://img.shields.io/npm/v/astro?style=for-the-badge&logo=astro&label=Astro&color=%23BC52EE)](https://docs.astro.build/) [![TailwindCSS version](https://img.shields.io/npm/v/tailwindcss?style=for-the-badge&logo=tailwindcss&label=TailwindCSS&color=%2306B6D4)](https://tailwindcss.com/docs) [![TypeScript version](https://img.shields.io/npm/v/typescript?style=for-the-badge&logo=typescript&label=TypeScript&color=%233178C6)](https://www.typescriptlang.org/) [![Biome version](https://img.shields.io/npm/v/@biomejs/biome?style=for-the-badge&logo=biome&label=Biome&color=%2360A5FA)](https://biomejs.dev/guides/getting-started/)
 
-Plantilla base para iniciar un nuevo proyecto con [Astro](https://astro.build/), [TailwindCSS](https://tailwindcss.com/) y [TypeScript](https://www.typescriptlang.org/) preconfigurados para acelerar el desarrollo de sitios web estáticos y aplicaciones modernas.
+Plantilla de [Astro](https://astro.build/), [TailwindCSS](https://tailwindcss.com/) y [TypeScript](https://www.typescriptlang.org/) para crear sitios web estáticos rápidos; optimizada para SEO y accesibilidad
 
 ---
 
@@ -10,7 +10,7 @@ Plantilla base para iniciar un nuevo proyecto con [Astro](https://astro.build/),
 
 - **Astro** v6 configurado para contenido estático.
 - **TailwindCSS** v4 para estilos rápidos.
-- **TypeScript** v5 para usar con `tsconfig.json` optimizado.
+- **TypeScript** v6 para usar con `tsconfig.json` optimizado.
 - **Biome** v2 para lintear y formatear el código.
 
 ---
