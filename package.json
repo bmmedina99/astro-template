@@ -28,7 +28,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.8",
     "@astrojs/sitemap": "3.7.2",
-    "@biomejs/biome": "2.4.10",
+    "@biomejs/biome": "2.4.12",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tailwindcss/vite": "4.2.2",
