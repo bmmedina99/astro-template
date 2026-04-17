@@ -34,7 +34,7 @@
     "@tailwindcss/vite": "4.2.2",
     "@types/node": "25.5.2",
     "tailwindcss": "4.2.2",
-    "typescript": "6.0.2"
+    "typescript": "6.0.3"
   },
   "optionalDependencies": {
     "sharp": "0.34.5"
