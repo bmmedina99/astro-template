@@ -4,14 +4,30 @@ import { Schema } from 'astro-seo-schema'
 import { configSite } from '@/site.config'
 import globalCSS from '@/styles/global.css?inline'
 
-const { title, description, robots = 'index, follow', errorPage } = Astro.props
-const siteTitle = `${title} | ${configSite.title}`
-const siteAuthor = configSite.author
-const siteURL = new URL(Astro.request.url, Astro.site).toString()
+const { title, description, robots = false, schema } = Astro.props
+
+const siteTitle = `${title} | ${configSite.name}`
+const siteURL = Astro.site ?? Astro.url.origin
+const siteCanonical = new URL(Astro.url.pathname, siteURL).toString()
+const siteSocialImage = new URL(
+  '/images/astro-social-media.jpg',
+  siteURL,
+).toString()
+const siteSocialAlt = 'Imagen para la plantilla de Astro como Socil media'
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Datos del sitio -->
+<title>{siteTitle}</title>
+<meta name="description" content={description} />
+<meta name="author" content={configSite.author} />
+{robots && <meta name="robots" content="noindex, nofollow" />}
+
+<link rel="canonical" href={siteCanonical} />
+
+<meta name="theme-color" content="#faf0e6" />
 
 <!-- Carga de la fuente de astro.config.ts -->
 <Font cssVariable="--font-poppins" />
@@ -19,51 +35,28 @@ const siteURL = new URL(Astro.request.url, Astro.site).toString()
 <!-- Carga el CSS generado en linea para evitar FOUC (Flash Of Unstyled Content)-->
 <style set:html={globalCSS}></style>
 
-<!-- Datos del sitio -->
-<title>{siteTitle}</title>
-<meta name="description" content={description} />
-<meta name="robots" content={robots} />
-<meta name="author" content={siteAuthor} />
+<!-- Social Media Image 1200x630 recomendada -->
+<meta property="og:url" content={siteCanonical} />
+<meta property="og:title" content={siteTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={siteSocialImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={siteSocialAlt} />
+<meta property="og:site_name" content={configSite.name} />
+<meta property="og:locale" content={configSite.locale} />
 
-<!-- Open Graph - Imagen 1200x630 recomendada -->
-<!-- Twitter Card - Imagen 1200x675 para summary_large_image recomendada -->
-{
-  !errorPage && (
-    <meta property="og:title" content={siteTitle} />
-    <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="bmmedina.dev" />
-    <meta property="og:image" content={`${siteURL}/images/open-graph.webp`} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={siteURL} />
-    <meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@bmmedina99" />
+<meta name="twitter:title" content={siteTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={siteSocialImage} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={siteTitle} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={`${siteURL}/images/twitter-card.webp`} />
-    <meta property="twitter:url" content={siteURL} />
-    <meta property="twitter:site" content="@twiter-site" />
-    <meta property="twitter:cre tor" content="@twitter-author" />
-  )
-}
-
-<!-- Propiedades + Favicon -->
-<meta name="theme-color" content="#faf0e6" />
+<!-- Favicon -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
-<link rel="canonical" href={siteURL} />
 
 <!-- Configura el schema según el tipo de sitio: https://schema.org/docs/full.html -->
-<Schema
-  item={{
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: configSite.author,
-    url: siteURL,
-    description: description,
-  }}
-/>
+{schema && <Schema item={schema} />}
