@@ -1,10 +1,11 @@
 import type { Config, Integrations } from './types'
 
 export const configSite: Config = {
-  title: 'AstroKit',
+  name: 'AstroKit',
   description:
     'Plantilla de Astro para crear sitios web estáticos rápidos; optimizada para SEO y accesibilidad, preconfigurada con TailwindCSS y TypeScript.',
   lang: 'es',
+  locale: 'es_ES',
   author: 'bmmedina99',
   url: 'https://localhost:5000',
 }
